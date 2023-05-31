@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% extends "basic_app/base.html" %}
+{% load my_extras %}
+
+{% block body_block %}
+    <h1>Welcoem to index</h1>
+    <h2>This is template inheritance.</h2>
+    <h1>
+        <!-- upper will filter it to all uppercase -->
+        <!-- add will add to theh number -->
+    {{ text|upper  }}
+    {{ number|add:"99" }}
+    <!-- Custom filter -->
+    {{ text|cutMeUp:'hello'}}
+    </h1>
+{% endblock %}
